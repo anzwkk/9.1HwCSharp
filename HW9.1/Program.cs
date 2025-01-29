@@ -58,15 +58,27 @@
 //}
 
 //Написати програму, що буде знаходити суму елементів по діагоналі у двовимірному масиві
-int[,] array = {
-            { 1, 2, 3 },
-            { 4, 5, 6 },
-            { 7, 8, 9 }
-        };
-int sum = 0;
+//int[,] array = {
+//            { 1, 2, 3 },
+//            { 4, 5, 6 },
+//            { 7, 8, 9 }
+//        };
+//int sum = 0;
 
-for (int i = 0; i < 3; i++)
+//for (int i = 0; i < 3; i++)
+//{
+//    sum += array[i, i];
+//}
+//Console.WriteLine("Сума елементів по діагоналі: " + sum);
+
+//Написати програму, що буде видаляти з масиву елемент за вказаним індексом.
+int[] array = { 1, 2, 3, 4, 5, 6 };
+int indexToRemove = 2;
+
+if (indexToRemove < 0 || indexToRemove >= array.Length)
 {
-    sum += array[i, i];
+    Console.WriteLine("Недійсний індекс");
+    return;
 }
-Console.WriteLine("Сума елементів по діагоналі: " + sum);
+
+int[] newArray = new int[array.Length - 1];
