@@ -36,3 +36,23 @@ for (int i = 0; i < rows; i++)
         temp[index++] = matrix[i, j];
     }
 }
+Array.Sort(temp);
+
+index = 0;
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < cols; j++)
+    {
+        matrix[i, j] = temp[index++];
+    }
+}
+
+Console.WriteLine("Відсортований двовимірний масив: ");
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < cols; j++)
+    {
+        Console.Write(matrix[i, j] + " ");
+    }
+    Console.WriteLine();
+}
