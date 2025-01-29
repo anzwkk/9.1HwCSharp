@@ -18,41 +18,55 @@
 //Console.WriteLine("Другий найбільший елемент: " + max2);
 
 //Написати програму, що буде сортувати за зростанням елементи двовимірного масиву.
-int[,] matrix = {
-            { 5, 3, 9 },
-            { 1, 7, 6 },
-            { 8, 4, 2 }
+//int[,] matrix = {
+//            { 5, 3, 9 },
+//            { 1, 7, 6 },
+//            { 8, 4, 2 }
+//        };
+//int rows = matrix.GetLength(0); 
+//int cols = matrix.GetLength(1);
+
+//int[] temp = new int[rows * cols];
+//int index = 0;
+
+//for (int i = 0; i < rows; i++)
+//{
+//    for (int j = 0; j < cols; j++)
+//    {
+//        temp[index++] = matrix[i, j];
+//    }
+//}
+//Array.Sort(temp);
+
+//index = 0;
+//for (int i = 0; i < rows; i++)
+//{
+//    for (int j = 0; j < cols; j++)
+//    {
+//        matrix[i, j] = temp[index++];
+//    }
+//}
+
+//Console.WriteLine("Відсортований двовимірний масив: ");
+//for (int i = 0; i < rows; i++)
+//{
+//    for (int j = 0; j < cols; j++)
+//    {
+//        Console.Write(matrix[i, j] + " ");
+//    }
+//    Console.WriteLine();
+//}
+
+//Написати програму, що буде знаходити суму елементів по діагоналі у двовимірному масиві
+int[,] array = {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
         };
-int rows = matrix.GetLength(0); 
-int cols = matrix.GetLength(1);
+int sum = 0;
 
-int[] temp = new int[rows * cols];
-int index = 0;
-
-for (int i = 0; i < rows; i++)
+for (int i = 0; i < 3; i++)
 {
-    for (int j = 0; j < cols; j++)
-    {
-        temp[index++] = matrix[i, j];
-    }
+    sum += array[i, i];
 }
-Array.Sort(temp);
-
-index = 0;
-for (int i = 0; i < rows; i++)
-{
-    for (int j = 0; j < cols; j++)
-    {
-        matrix[i, j] = temp[index++];
-    }
-}
-
-Console.WriteLine("Відсортований двовимірний масив: ");
-for (int i = 0; i < rows; i++)
-{
-    for (int j = 0; j < cols; j++)
-    {
-        Console.Write(matrix[i, j] + " ");
-    }
-    Console.WriteLine();
-}
+Console.WriteLine("Сума елементів по діагоналі: " + sum);
