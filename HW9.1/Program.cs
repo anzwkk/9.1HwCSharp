@@ -82,3 +82,18 @@ if (indexToRemove < 0 || indexToRemove >= array.Length)
 }
 
 int[] newArray = new int[array.Length - 1];
+int newIndex = 0;
+
+for (int i = 0; i < array.Length; i++)
+{
+    if (i != indexToRemove)
+    {
+        newArray[newIndex] = array[i];
+        newIndex++;
+    }
+}
+Console.WriteLine("Масив після видалення: ");
+for (int i = 0; i < newArray.Length; i++)
+{
+    Console.Write(newArray[i] + " ");
+}
